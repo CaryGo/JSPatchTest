@@ -20,18 +20,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [self setJPEngine:nil];
     //可以通过更改url下的脚本文件完成修改
-    NSString *url = @"https://github.com/CaryGo/JSPatchTest/blob/master/cary.js";
+    //该url是项目一级目录下的.js文件的路径
+    NSString *url = @"file:///Users/apple/Desktop/CaryExercise/JSPatchTest/cary.js";
     NSString * path = [NSString stringWithFormat:@"%@/Documents/cary.js",NSHomeDirectory()];
     [HYBNetworking downloadWithUrl:url saveToPath:path progress:^(int64_t bytesRead, int64_t totalBytesRead) {
-
+        
     } success:^(id response) {
         //这里将下载的脚本文件保存 重新设置一下
-//        [self setJPEngine:path];
+        [self setJPEngine:path];
     } failure:^(NSError *error) {
         
     }];
-    [self setJPEngine:nil];
     // Override point for customization after application launch.
     return YES;
 }
