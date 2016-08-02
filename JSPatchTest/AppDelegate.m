@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import "HYBNetworking.h"
-#import <JSPatch/JSPatch.h>
+//#import "JSPatch.h"
+#import "JPEngine.h"
 
 @interface AppDelegate ()
 
@@ -19,15 +20,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //可以通过更改url下的脚本文件完成修改
     NSString *url = @"https://github.com/CaryGo/HTML5-Demo-HelloWorld/blob/master/README.md";
-    NSString * path = [NSString stringWithFormat:@"%@/Documents/README.md",NSHomeDirectory()];
+    NSString * path = [NSString stringWithFormat:@"%@/Documents/cary.js",NSHomeDirectory()];
     [HYBNetworking downloadWithUrl:url saveToPath:path progress:^(int64_t bytesRead, int64_t totalBytesRead) {
         
     } success:^(id response) {
-        
+//        [JPEngine startEngine];
+//        NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"cary" ofType:@"js"];
+//        NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+//        [JPEngine evaluateScript:script];
     } failure:^(NSError *error) {
         
     }];
+    [JPEngine startEngine];
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"cary" ofType:@"js"];
+    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+    [JPEngine evaluateScript:script];
     
     // Override point for customization after application launch.
     return YES;

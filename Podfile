@@ -6,6 +6,6 @@ platform :ios, '7.0'
 target 'JSPatchTest' do
 
 pod 'HYBNetworking'
-#pod 'JSPatch'
+pod 'JSPatch'
 
 end

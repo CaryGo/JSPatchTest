@@ -14,7 +14,6 @@
 		1886E93A1D504E4B003BD4E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1886E9391D504E4B003BD4E9 /* Assets.xcassets */; };
 		1886E93D1D504E4B003BD4E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1886E93B1D504E4B003BD4E9 /* LaunchScreen.storyboard */; };
 		1886E9451D5056EA003BD4E9 /* cary.js in Resources */ = {isa = PBXBuildFile; fileRef = 1886E9441D5056EA003BD4E9 /* cary.js */; };
-		1886E9471D5056FA003BD4E9 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1886E9461D5056FA003BD4E9 /* JSPatch.framework */; };
 		A0360D5F3D37B309D76E343F /* libPods-JSPatchTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B24B3D0764B519E3E5A07302 /* libPods-JSPatchTest.a */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		1886E93C1D504E4B003BD4E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1886E93E1D504E4B003BD4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1886E9441D5056EA003BD4E9 /* cary.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = cary.js; sourceTree = "<group>"; };
-		1886E9461D5056FA003BD4E9 /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
 		5D0222406C3C254354941940 /* Pods-JSPatchTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSPatchTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSPatchTest/Pods-JSPatchTest.debug.xcconfig"; sourceTree = "<group>"; };
 		91C8F028AA70A34A16DF16CD /* Pods-JSPatchTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSPatchTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-JSPatchTest/Pods-JSPatchTest.release.xcconfig"; sourceTree = "<group>"; };
 		B24B3D0764B519E3E5A07302 /* libPods-JSPatchTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JSPatchTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,7 +39,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1886E9471D5056FA003BD4E9 /* JSPatch.framework in Frameworks */,
 				A0360D5F3D37B309D76E343F /* libPods-JSPatchTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +75,6 @@
 		1886E92C1D504E4B003BD4E9 /* JSPatchTest */ = {
 			isa = PBXGroup;
 			children = (
-				1886E9461D5056FA003BD4E9 /* JSPatch.framework */,
 				1886E9441D5056EA003BD4E9 /* cary.js */,
 				1886E9301D504E4B003BD4E9 /* AppDelegate.h */,
 				1886E9311D504E4B003BD4E9 /* AppDelegate.m */,

@@ -16,14 +16,19 @@ PODS:
     - AFNetworking/NSURLSession
   - HYBNetworking (3.3.0):
     - AFNetworking (~> 3.0.0)
+  - JSPatch (1.1):
+    - JSPatch/Core (= 1.1)
+  - JSPatch/Core (1.1)
 
 DEPENDENCIES:
   - HYBNetworking
+  - JSPatch
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   HYBNetworking: 923c16574b12d6203dac1f03b97c48b2a2f76607
+  JSPatch: ade285ad1d8f06146ed6054a39cef87509453299
 
-PODFILE CHECKSUM: d289de129c16d40c5c85700fdf3e79e299ee1764
+PODFILE CHECKSUM: 00da4401d9e56d657703afe67d9c9f7fa303cc26
 
 COCOAPODS: 1.0.1
