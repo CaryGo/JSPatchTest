@@ -21,25 +21,30 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //可以通过更改url下的脚本文件完成修改
-    NSString *url = @"https://github.com/CaryGo/HTML5-Demo-HelloWorld/blob/master/README.md";
+    NSString *url = @"https://github.com/CaryGo/JSPatchTest/blob/master/cary.js";
     NSString * path = [NSString stringWithFormat:@"%@/Documents/cary.js",NSHomeDirectory()];
     [HYBNetworking downloadWithUrl:url saveToPath:path progress:^(int64_t bytesRead, int64_t totalBytesRead) {
-        
+
     } success:^(id response) {
-//        [JPEngine startEngine];
-//        NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"cary" ofType:@"js"];
-//        NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
-//        [JPEngine evaluateScript:script];
+        //这里将下载的脚本文件保存 重新设置一下
+//        [self setJPEngine:path];
     } failure:^(NSError *error) {
         
     }];
-    [JPEngine startEngine];
-    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"cary" ofType:@"js"];
-    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
-    [JPEngine evaluateScript:script];
-    
+    [self setJPEngine:nil];
     // Override point for customization after application launch.
     return YES;
+}
+
+- (void)setJPEngine:(NSString *)path{
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"cary" ofType:@"js"];
+    NSFileManager * fileManager = [NSFileManager defaultManager];
+    if (path && [fileManager fileExistsAtPath:path]) {
+        sourcePath = path;
+    }
+    [JPEngine startEngine];
+    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+    [JPEngine evaluateScript:script];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

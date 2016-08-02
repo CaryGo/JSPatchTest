@@ -13,12 +13,13 @@ defineClass("ViewController", {
             return cell
             },
             
-//            //instance method definitions
-//            tableView_didSelectRowAtIndexPath: function(tableView, indexPath) {
-//            var row = indexPath.row()
-//            if (self.dataSource().length > row) {  // 加上判断越界的逻辑
-//            var content = self.dataArr()[row];
-//            }
-//            }
+            //instance method definitions
+            tableView_didSelectRowAtIndexPath: function(tableView, indexPath) {
+            tableView.deselectRowAtIndexPath_animated(indexPath,true)
+            var row = indexPath.row()
+            if (self.dataSource().length > row) {  // 加上判断越界的逻辑
+            var content = self.dataSource()[row];
+            }
+            }
             },
             {});
